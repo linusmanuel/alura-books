@@ -6,4 +6,29 @@
 
 .app-header {
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opcoes {
+  display: flex;
+  list-style: none;
+}
+
+.opcao {
+  min-width: 120px;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.icones {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
