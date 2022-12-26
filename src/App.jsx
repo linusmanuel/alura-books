@@ -1,9 +1,9 @@
 import './App.css';
 import Logo from './componentes/logo'
+import OpcoesHeader from './componentes/OpcoesHeader';
 import Perfil from './images/perfil.svg'
 import Sacola from './images/sacola.svg'
 
-const textOpcoes = ['Categorias', 'Minha Estande', 'Favoritos']
 const icones = [Perfil, Sacola]
 
 function App() {
@@ -11,13 +11,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <Logo />
-        <ul className="opcoes">
-         {
-          textOpcoes.map( (texto) => (
-            <li className='opcao'>{texto}</li>
-          ))
-         }
-        </ul>
+        <OpcoesHeader />
         <ul className='icones'>
           {
             icones.map( (icone) => (
