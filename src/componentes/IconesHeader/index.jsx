@@ -1,4 +1,3 @@
-import './style.css'
 import Perfil from '../../images/perfil.svg'
 import Sacola from '../../images/sacola.svg'
 import styled from 'styled-components'
