@@ -1,0 +1,9 @@
+.icones {
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.icone:not(:last-child) {
+  margin-right: 15px;
+}

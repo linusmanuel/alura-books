@@ -1,10 +1,7 @@
 import './App.css';
 import Logo from './componentes/logo'
 import OpcoesHeader from './componentes/OpcoesHeader';
-import Perfil from './images/perfil.svg'
-import Sacola from './images/sacola.svg'
-
-const icones = [Perfil, Sacola]
+import IconesHeader from './componentes/IconesHeader';
 
 function App() {
   return (
@@ -12,14 +9,7 @@ function App() {
       <header className="app-header">
         <Logo />
         <OpcoesHeader />
-        <ul className='icones'>
-          {
-            icones.map( (icone) => (
-              <li className='icone'><img src={icone} alt="" /></li>
-            ))
-          }
-        </ul>
-
+        <IconesHeader />
       </header>
     </div>
   );

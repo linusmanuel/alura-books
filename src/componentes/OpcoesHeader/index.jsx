@@ -1,3 +1,4 @@
+import './style.css'
 const textOpcoes = ['Categorias', 'Minha Estande', 'Favoritos']
 
 function OpcoesHeader() {
