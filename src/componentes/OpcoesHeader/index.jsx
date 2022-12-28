@@ -4,7 +4,6 @@ const textOpcoes = ['Categorias', 'Minha Estande', 'Favoritos']
 
 const Opcoes = styled.ul`
   display: flex;
-  list-style: none;
 `
 const Opcao = styled.li`
   min-width: 120px;

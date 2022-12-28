@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const icones = [Perfil, Sacola]
 
 const Icones = styled.ul`
-  list-style: none;
   display: flex;
   cursor: pointer;
 `
@@ -18,7 +17,7 @@ function IconesHeader() {
   return (
     <Icones>
       {
-        icones.map( (icone) => (
+        icones.map((icone) => (
           <Icone><img src={icone} alt="" /></Icone>
         ))
       }
