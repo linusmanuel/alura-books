@@ -1,4 +1,5 @@
 import Input from "../Input"
+import { Livros } from './dadosPesquisa'
 import styled from "styled-components"
 import { useState } from "react"
 
@@ -21,7 +22,8 @@ const Subtitle = styled.h2`
 `
 
 function Pesquisa() {
-  const [TextoDigitado, setTextoDigital] = useState('')
+  const [livrosPesquisados, setLivrosPesquisados] = useState([])
+  console.log(livrosPesquisados)
 
   return (
     <PesquisaContainer>
@@ -29,10 +31,12 @@ function Pesquisa() {
       <Subtitle>Encontre seu livro em nossa estande</Subtitle>
       <Input 
         placeholder="Escreva sua próxima leitura"
-        onBlur={evento => setTextoDigital(evento.target.value)}
+        onBlur={evento => {
+          const textoDigitado = evento.target.value
+          const resultadoPesquisa = Livros.filter(livro => livro.nome.includes(textoDigitado))
+          setLivrosPesquisados(resultadoPesquisa)
+        }}
       />
-
-      <p>{TextoDigitado}</p>
     </PesquisaContainer>
   )
 }
