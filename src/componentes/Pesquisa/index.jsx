@@ -20,10 +20,24 @@ const Subtitle = styled.h2`
   font-size: 16px;
   margin-bottom: 40px;
 `
+const Resultado = styled.div`
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  padding-block: 40px;
+  cursor: pointer;
+  transition: .2s;
 
+  &:hover {
+    transform: scale(1.05);
+    border-bottom: dotted 1px #fff;
+    
+  }
+`
 function Pesquisa() {
   const [livrosPesquisados, setLivrosPesquisados] = useState([])
-  console.log(livrosPesquisados)
 
   return (
     <PesquisaContainer>
@@ -37,6 +51,15 @@ function Pesquisa() {
           setLivrosPesquisados(resultadoPesquisa)
         }}
       />
+
+      {
+        livrosPesquisados.map(livro => (
+          <Resultado>
+            <img src={livro.src} alt="" />
+            <p>{livro.nome}</p>
+          </Resultado>
+        ))
+      }
     </PesquisaContainer>
   )
 }
