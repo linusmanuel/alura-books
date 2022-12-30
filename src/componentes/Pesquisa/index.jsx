@@ -32,10 +32,15 @@ const Resultado = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    border-bottom: dotted 1px #fff;
     
   }
 `
+
+const CapaLivro = styled.img`
+  width: 150px;
+  height: auto;
+`
+
 function Pesquisa() {
   const [livrosPesquisados, setLivrosPesquisados] = useState([])
 
@@ -55,7 +60,7 @@ function Pesquisa() {
       {
         livrosPesquisados.map(livro => (
           <Resultado>
-            <img src={livro.src} alt="" />
+            <CapaLivro src={livro.src} alt="" />
             <p>{livro.nome}</p>
           </Resultado>
         ))
